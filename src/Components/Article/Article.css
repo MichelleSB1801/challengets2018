@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.artContainer{
+    width: 800px;
+    height: auto;
+    margin: 10vh auto;
+    background-color: #6f6f6f;
+    color: white;
+    border: solid 1px black;
+    padding: 40px 40px 40px 40px;
+}
+.artTitle{
+    font-size: 28px;
+    display: block;
+}
+.artDate{
+    font-size: 15px;
+    display: block;
+    margin: 15px 0px;
+}
+.subCont{
+    display: flex;
+}
+.imgDesc{
+    width: 350px;
+    height: auto;
+    margin-right: 30px;
+}
+.artImg{
+    width: 300px;
+    height: auto;
+    display: block;
+    margin-bottom: 5px
+}
+.artCr{
+    display: block;
+}
+.artExp{
+    display: inline;
+    width: 500px;
+
+}
