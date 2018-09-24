@@ -22,7 +22,18 @@ class ViewArticle extends Component {
         render: true
       })
     }
-
+async componentDidUpdate (prevProps, prevState) {
+    if (this.state.data !== prevState.data) {
+ 
+      const data = await fetch('https://api.nasa.gov/planetary/apod?api_key=MmSynY0I4ZVDXYkUYjKwYW4ThK8aeVPTYcKz5HCN')
+      const datajson = await data.json()
+      console.log(datajson, 'viewArt')
+      this.setState({
+        data: datajson,
+        render: true
+      })
+    }
+  }
     render() {
     const infoArt = this.state;
     return (
@@ -30,7 +41,5 @@ class ViewArticle extends Component {
         <Article info={infoArt} />
       </div>
     );
-  }
-}
-
+  
 export default ViewArticle;
